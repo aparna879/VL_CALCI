@@ -11,11 +11,12 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
+
         <EditText
             android:id="@+id/show"
-            android:layout_width="match_parent"
+            android:layout_width="474dp"
             android:layout_height="match_parent"
-            android:hint="@string/ENTER"/>
+            android:hint="@string/ENTER" />
     </LinearLayout>
 
     <LinearLayout
@@ -43,6 +44,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_toRightOf="@id/ac"
+                android:onClick="cross"
                 android:text="BACK"/>
 
             <Button
@@ -176,6 +178,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/three"
                 android:layout_toRightOf="@id/zero"
+                android:tag="."
+                android:onClick="numpad"
                 android:text="."/>
             <Button
                 android:id="@+id/equal"

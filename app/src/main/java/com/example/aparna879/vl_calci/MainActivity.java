@@ -7,8 +7,9 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
-    int result=0;
+
     String current_value="0";
+    boolean status;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,12 +19,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void reset(View view){
-
         setvalue(0);
         current_value="0";
     }
 
-    private void setvalue(int n){
+
+    private void setvalue(double n){
         EditText e = findViewById(R.id.show);
         e.setText(String.valueOf(n));
     }
@@ -31,8 +32,18 @@ public class MainActivity extends AppCompatActivity {
 
     public void numpad(View view){
         String s=(String)view.getTag();
-        current_value+=(String)s;
-        int i=Integer.parseInt(current_value);
+        if(s==".")
+            status = true;
+        if(!status || s!=".")
+            current_value+=(String)s;
+        double i=Double.parseDouble(current_value);
+        setvalue(i);
+
+    }
+
+    public void cross(View view){
+        current_value = current_value.substring(0,current_value.length()-1);
+        double i=Double.parseDouble(current_value);
         setvalue(i);
 
     }
