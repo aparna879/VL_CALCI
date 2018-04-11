@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void reset(View view){
         setvalue(0);
-        current_value="0";
+        current_value ="0";
     }
 
 
