@@ -52,6 +52,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
+                android:onClick="operation"
+                android:tag="/"
                 android:layout_toRightOf="@id/back"
                 android:text="/"/>
 
@@ -60,6 +62,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
+                android:onClick="operation"
+                android:tag="x"
                 android:layout_toRightOf="@id/divide"
                 android:text="x"/>
             <Button
@@ -93,6 +97,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/nine"
+                android:onClick="operation"
+                android:tag="-"
                 android:layout_below="@id/x"
                 android:text="-"/>
             <Button
@@ -127,6 +133,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/sub"
+                android:onClick="operation"
+                android:tag="+"
                 android:layout_toRightOf="@id/six"
                 android:text="+"/>
             <Button
@@ -162,6 +170,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/one"
                 android:layout_alignParentLeft="true"
+                android:tag="%"
+                android:onClick="percentage"
                 android:text="%"/>
             <Button
                 android:id="@+id/zero"
@@ -187,6 +197,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/add"
                 android:layout_toRightOf="@id/three"
+                android:onClick="result"
                 android:height="95dp"
                 android:text="="/>
 
