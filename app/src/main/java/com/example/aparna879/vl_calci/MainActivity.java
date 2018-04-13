@@ -2,6 +2,7 @@ package com.example.aparna879.vl_calci;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Selection;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -29,12 +30,14 @@ public class MainActivity extends AppCompatActivity {
     private void setvalue(double n){
         EditText e = findViewById(R.id.show);
         e.setText(String.valueOf(n));
+        e.setSelection(e.getText().length());
     }
 
 
     private void setvalue(String n){
         EditText e = findViewById(R.id.show);
         e.setText(n);
+        e.setSelection(e.getText().length());
     }
 
     public void numpad(View view){
